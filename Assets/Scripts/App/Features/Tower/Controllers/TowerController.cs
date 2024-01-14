@@ -31,26 +31,26 @@ namespace App.Features.Tower
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
-                var layerModel = AddLayerModel(model.tower.Count, new Vector2Int(configuration.layerConfiguration.layerSize.x, configuration.layerConfiguration.layerSize.y));
+                var layerModel = AddLayerModel(new Vector3(0, model.tower.Count, 0), new Vector2Int(configuration.layerConfiguration.layerSize.x, configuration.layerConfiguration.layerSize.y));
                 model.tower.Add(layerModel);
                 var layerView = AddLayerView(layerModel);
                 view.tower.Add(layerView);
             }
         }
 
-        private LayerModel AddLayerModel(int height, Vector2Int size)
+        private LayerModel AddLayerModel(Vector3 position, Vector2Int size)
         {
             var layerModel = new LayerModel();
-            layerModel.GenerateLayer(height, new Vector2Int(size.x, size.y));
+            layerModel.GenerateLayer(position, configuration.layerConfiguration);
             return layerModel;
         }
 
         private LayerView AddLayerView(LayerModel layerModel)
         {
             var layerView = GameObject.Instantiate(configuration.layerViewPrefab, view.transform);
-            layerView.transform.position = new Vector3(0, layerModel.height + layerModel.height * configuration.layerConfiguration.betweenLayerSpacing, 0);
+            layerView.transform.position = layerModel.worldPosition;
             layerView.GenerateLayer(layerModel, configuration.layerConfiguration);
-            layerView.gameObject.name += $" - height: {layerModel.height}";
+            layerView.gameObject.name += $" - height: {layerModel.worldPosition.y}";
             return layerView;
         }
     }

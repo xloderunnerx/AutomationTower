@@ -9,21 +9,22 @@ namespace App.Features.Tower
 {
     public class LayerModel
     {
-        public int height;
+        public Vector3 worldPosition;
         public Vector2Int size;
         public TileModel[,] grid;
 
-        public void GenerateLayer(int height, Vector2Int size)
+        public void GenerateLayer(Vector3 worldPosition, LayerConfiguration layerConfiguration)
         {
-            this.height = height;
-            this.size = size;
+            this.worldPosition = worldPosition;
+            size = layerConfiguration.layerSize;
             grid = new TileModel[size.x, size.y];
             for (int x = 0; x < size.x; x++)
             {
                 for (int z = 0; z < size.y; z++)
                 {
                     var tile = new TileModel();
-                    tile.gridPosition = new Vector3Int(x, height, z);
+                    tile.worldPosition = new Vector3(x - size.x / 2, worldPosition.y + worldPosition.y * layerConfiguration.betweenLayerSpacing, z - size.y / 2);
+                    tile.gridPosition = new Vector3Int(x, (int)worldPosition.y, z);
                     grid[x, z] = tile;
                 }
             }

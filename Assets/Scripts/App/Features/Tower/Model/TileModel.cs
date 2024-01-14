@@ -9,6 +9,7 @@ namespace App.Features.Tower
 {
     public class TileModel
     {
+        public Vector3 worldPosition;
         public Vector3Int gridPosition;
         public Color color;
     }

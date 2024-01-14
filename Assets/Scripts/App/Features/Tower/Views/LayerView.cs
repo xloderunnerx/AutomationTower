@@ -18,9 +18,11 @@ namespace App.Features.Tower
                 for (int z = 0; z < layerModel.size.y; z++)
                 {
                     var tileView = GameObject.Instantiate(layerConfiguration.tileViewPrefab, transform);
-                    tileView.transform.position = new Vector3(layerModel.grid[x, z].gridPosition.x - layerModel.size.x / 2, layerModel.height + layerModel.height * layerConfiguration.betweenLayerSpacing, layerModel.grid[x, z].gridPosition.z - layerModel.size.y / 2);
-                    tileView.gameObject.name += $" - x:{x}; y:{layerModel.height}; z:{z};";
+                    tileView.transform.position = layerModel.grid[x, z].worldPosition;
+                    tileView.gameObject.name += $" - x:{x}; y:{layerModel.worldPosition.y}; z:{z};";
                     tileView.SetTileColor(Color.HSVToRGB(0, 0, Random.Range(0.7f, 1.0f)));
+                    tileView.worldPosition = layerModel.grid[x, z].worldPosition;
+                    tileView.gridPosition = layerModel.grid[x, z].gridPosition;
                     if (x == 0 || z == 0 || x == layerModel.size.x - 1 || z == layerModel.size.y - 1)
                         tileView.SetTileColor(layerConfiguration.bordersColor + Color.HSVToRGB(0, 0, Random.Range(0.0f, 0.3f)));
                     layer.Add(tileView);
