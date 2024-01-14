@@ -1,3 +1,5 @@
+using Assets.Scripts.App.Features.Structures.Views;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace App.Features.Structures
@@ -7,5 +9,7 @@ namespace App.Features.Structures
 	{
 		public LayerConfiguration layerConfiguration;
 		public LayerView layerViewPrefab;
+
+		public BoxView boxViewPrefab;
 	}
 }

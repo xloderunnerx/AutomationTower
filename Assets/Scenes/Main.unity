@@ -630,6 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerViews: []
+  abstractStructureViews: []
 --- !u!1 &1433946252
 GameObject:
   m_ObjectHideFlags: 0

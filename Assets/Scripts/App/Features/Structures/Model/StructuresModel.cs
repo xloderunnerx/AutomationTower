@@ -5,10 +5,12 @@ namespace App.Features.Structures
 	public class StructuresModel
 	{
 		public List<LayerModel> layers;
+        public List<AbstractStructureModel> strauctures;
 
         public StructuresModel()
         {
-            this.layers = new List<LayerModel>();
+            layers = new List<LayerModel>();
+            strauctures = new List<AbstractStructureModel>();
         }
     }
 }

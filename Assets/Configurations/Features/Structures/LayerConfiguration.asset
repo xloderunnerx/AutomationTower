@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3aaf8508e76714b94afe3dd3be13ca, type: 3}
   m_Name: LayerConfiguration
   m_EditorClassIdentifier: 
-  tileViewPrefab: {fileID: 5772708480206158581, guid: 29af551e2f9281348951f15967b540e6, type: 3}
+  tileViewPrefab: {fileID: 1561533570395463625, guid: 29af551e2f9281348951f15967b540e6, type: 3}

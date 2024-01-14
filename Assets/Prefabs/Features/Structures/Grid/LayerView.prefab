@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5279795565163780410}
-  - component: {fileID: 5279795565163780405}
+  - component: {fileID: 8753004567107442625}
   m_Layer: 0
   m_Name: LayerView
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5279795565163780405
+--- !u!114 &8753004567107442625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,6 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5279795565163780411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b55da4dbb834e6419c872d2c71a2a71, type: 3}
+  m_Script: {fileID: 11500000, guid: d9d7094170d560140963cf26c37b6c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layer: []

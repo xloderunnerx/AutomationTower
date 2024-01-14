@@ -17,9 +17,6 @@ namespace App.Features.Structures
                     var tileView = GameObject.Instantiate(layerConfiguration.tileViewPrefab, transform);
                     tileView.transform.position = layerModel.grid[x, z].worldPosition;
                     tileView.gameObject.name += $" - x:{x}; y:{layerModel.worldPosition.y}; z:{z};";
-                    var color = Color.HSVToRGB(0, 0, Random.Range(0.7f, 1.0f));
-                    color.a = 0.1f;
-                    tileView.SetTileColor(color);
                     tileView.worldPosition = layerModel.grid[x, z].worldPosition;
                     tileView.gridPosition = layerModel.grid[x, z].gridPosition;
                     layer.Add(tileView);

@@ -19,7 +19,7 @@ namespace App.Features.TouchRaycast
             if (Input.GetKeyDown(KeyCode.Mouse0))
                 TryFireSignal(new RaycastTouchDownSignal(CastRayFromCamera()));
             if (Input.GetKey(KeyCode.Mouse0))
-                TryFireSignal(new RaycastTouchDownSignal(CastRayFromCamera()));
+                TryFireSignal(new RaycastTouchSignal(CastRayFromCamera()));
         }
 
         private RaycastHit CastRayFromCamera()

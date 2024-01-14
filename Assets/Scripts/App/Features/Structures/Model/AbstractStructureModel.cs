@@ -9,8 +9,8 @@ namespace App.Features.Structures
 {
     public abstract class AbstractStructureModel
     {
-        protected Vector3 worldPosition;
-        protected Vector3Int gridPosition;
+        public Vector3 worldPosition;
+        public Vector3Int gridPosition;
 
         public abstract void Update();
     }

@@ -9,8 +9,10 @@ namespace App.Features.Structures
 {
     public class BoxModel : AbstractStructureModel
     {
-        public BoxModel(Vector3 worldPosition, Vector3 gridPosition)
+        public BoxModel(Vector3 worldPosition, Vector3Int gridPosition)
         {
+            this.worldPosition = worldPosition;
+            this.gridPosition = gridPosition;
         }
 
         public override void Update()
