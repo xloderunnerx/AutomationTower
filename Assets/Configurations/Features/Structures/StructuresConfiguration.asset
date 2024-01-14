@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: StructuresConfiguration
   m_EditorClassIdentifier: 
   isEnabled: 1
+  layerConfiguration: {fileID: 11400000, guid: 80c7f8b44b6562f468d86223ad2fcc6c, type: 2}
+  layerViewPrefab: {fileID: 5279795565163780405, guid: 444a8732c71a47e4fb704f5a8d9bb52f, type: 3}

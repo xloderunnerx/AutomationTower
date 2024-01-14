@@ -11,15 +11,15 @@ namespace App.Features.TouchRaycast
 
         public override void DeclareSignals()
         {
-            DeclareSignal<OnRaycastTouchDown>();
+            DeclareSignal<RaycastTouchDownSignal>();
         }
 
         public void Update()
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
-                TryFireSignal(new OnRaycastTouchDown(CastRayFromCamera()));
+                TryFireSignal(new RaycastTouchDownSignal(CastRayFromCamera()));
             if (Input.GetKey(KeyCode.Mouse0))
-                TryFireSignal(new OnRaycastTouchDown(CastRayFromCamera()));
+                TryFireSignal(new RaycastTouchDownSignal(CastRayFromCamera()));
         }
 
         private RaycastHit CastRayFromCamera()

@@ -19,10 +19,10 @@ namespace App.Features.Testing
 
         public override void SubscribeToSignals()
         {
-            SubscribeToSignal<OnRaycastTouchDown>(signal => ColorChangeTiles(signal));
+            SubscribeToSignal<RaycastTouchDownSignal>(signal => ColorChangeTiles(signal));
         }
 
-        private void ColorChangeTiles(OnRaycastTouchDown signal)
+        private void ColorChangeTiles(RaycastTouchDownSignal signal)
         {
             if (signal.Hit.collider == null)
                 return;

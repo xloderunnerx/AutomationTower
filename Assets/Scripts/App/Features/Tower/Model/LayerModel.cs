@@ -15,7 +15,7 @@ namespace App.Features.Tower
 
         public void GenerateLayer(Vector3 worldPosition, LayerConfiguration layerConfiguration)
         {
-            this.worldPosition = worldPosition;
+            this.worldPosition = new Vector3(worldPosition.x, worldPosition.y + worldPosition.y * layerConfiguration.betweenLayerSpacing, worldPosition.z);
             size = layerConfiguration.layerSize;
             grid = new TileModel[size.x, size.y];
             for (int x = 0; x < size.x; x++)

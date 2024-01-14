@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace App.Features.Tower
 {
-    public class OnLayerAdd
+    public class LayerAddSignal
     {
         private LayerModel layerModel;
 
-        public OnLayerAdd(LayerModel layerModel)
+        public LayerAddSignal(LayerModel layerModel)
         {
             this.layerModel = layerModel;
         }

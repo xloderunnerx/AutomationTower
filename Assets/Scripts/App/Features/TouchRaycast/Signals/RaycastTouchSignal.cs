@@ -7,11 +7,11 @@ using UnityEngine;
 
 namespace App.Features.TouchRaycast
 {
-    public class OnRaycastTouchDown
+    public class RaycastTouchSignal
     {
         private RaycastHit hit;
 
-        public OnRaycastTouchDown(RaycastHit hit)
+        public RaycastTouchSignal(RaycastHit hit)
         {
             this.hit = hit;
         }

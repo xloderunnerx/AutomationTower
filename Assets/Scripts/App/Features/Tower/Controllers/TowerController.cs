@@ -19,7 +19,7 @@ namespace App.Features.Tower
 
         public override void DeclareSignals()
         {
-            DeclareSignal<OnLayerAdd>();
+            DeclareSignal<LayerAddSignal>();
         }
 
         public override void Initialize()
@@ -30,12 +30,16 @@ namespace App.Features.Tower
         public void Update()
         {
             if (Input.GetKeyDown(KeyCode.W))
-            {
-                var layerModel = AddLayerModel(new Vector3(0, model.tower.Count, 0), new Vector2Int(configuration.layerConfiguration.layerSize.x, configuration.layerConfiguration.layerSize.y));
-                model.tower.Add(layerModel);
-                var layerView = AddLayerView(layerModel);
-                view.tower.Add(layerView);
-            }
+                AddLayer();
+        }
+
+        private void AddLayer()
+        {
+            var layerModel = AddLayerModel(new Vector3(0, model.tower.Count, 0), new Vector2Int(configuration.layerConfiguration.layerSize.x, configuration.layerConfiguration.layerSize.y));
+            model.tower.Add(layerModel);
+            var layerView = AddLayerView(layerModel);
+            view.tower.Add(layerView);
+            TryFireSignal(new LayerAddSignal(layerModel));
         }
 
         private LayerModel AddLayerModel(Vector3 position, Vector2Int size)
