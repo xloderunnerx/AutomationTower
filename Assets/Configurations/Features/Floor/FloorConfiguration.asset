@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 559392a2da7a8bf42b06d3035fa9ca11, type: 3}
-  m_Name: FeatureGenerator
+  m_Script: {fileID: 11500000, guid: 4bf4a39ab05710e4e824bed894dd9e68, type: 3}
+  m_Name: FloorConfiguration
   m_EditorClassIdentifier: 
-  featureName: Floor
-  generateModel: 1
-  generateView: 1
-  generateController: 1
-  generateConfiguration: 1
-  generateFeature: 0
+  isEnabled: 1
+  size: {x: 8, y: 8}
+  tileViewPrefab: {fileID: 1851315339959886336, guid: ad60e0e25c745864f9be6e68bdf13ce4, type: 3}
