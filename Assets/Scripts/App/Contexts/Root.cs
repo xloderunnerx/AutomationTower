@@ -1,4 +1,6 @@
-using App.Features.Floor;
+using App.Features.Testing;
+using App.Features.TouchRaycast;
+using App.Features.Tower;
 using Composite.Core;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,7 +29,9 @@ public class Root : AbstractCompositionRoot
 
     public void BindFeatures()
     {
-        BindFeature<FloorFeature>();
+        BindFeature<TestingFeature>();
+        BindFeature<TouchRaycastFeature>();
+        BindFeature<TowerFeature>();
     }
 
     private void OnDestroy()
