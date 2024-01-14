@@ -50,6 +50,7 @@ namespace App.Features.Tower
             var layerView = GameObject.Instantiate(configuration.layerViewPrefab, view.transform);
             layerView.transform.position = new Vector3(0, layerModel.height + layerModel.height * configuration.layerConfiguration.betweenLayerSpacing, 0);
             layerView.GenerateLayer(layerModel, configuration.layerConfiguration);
+            layerView.gameObject.name += $" - height: {layerModel.height}";
             return layerView;
         }
     }

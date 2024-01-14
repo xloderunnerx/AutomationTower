@@ -11,18 +11,18 @@ namespace App.Features.Tower
     {
         public int height;
         public Vector2Int size;
-        public Tile[,] grid;
+        public TileModel[,] grid;
 
         public void GenerateLayer(int height, Vector2Int size)
         {
             this.height = height;
             this.size = size;
-            grid = new Tile[size.x, size.y];
+            grid = new TileModel[size.x, size.y];
             for (int x = 0; x < size.x; x++)
             {
                 for (int z = 0; z < size.y; z++)
                 {
-                    var tile = new Tile();
+                    var tile = new TileModel();
                     tile.gridPosition = new Vector3Int(x, height, z);
                     grid[x, z] = tile;
                 }

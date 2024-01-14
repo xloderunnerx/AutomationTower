@@ -1,3 +1,4 @@
+using App.Features.Structures;
 using App.Features.Testing;
 using App.Features.TouchRaycast;
 using App.Features.Tower;
@@ -32,6 +33,7 @@ public class Root : AbstractCompositionRoot
         BindFeature<TestingFeature>();
         BindFeature<TouchRaycastFeature>();
         BindFeature<TowerFeature>();
+        BindFeature<StructuresFeature>();
     }
 
     private void OnDestroy()

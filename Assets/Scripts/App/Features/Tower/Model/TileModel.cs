@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace App.Features.Tower
 {
-    public class Tile
+    public class TileModel
     {
         public Vector3Int gridPosition;
         public Color color;
